@@ -45,6 +45,12 @@ An exception is thrown during marco expansion:
 
 ### 4. Varia
 
+#### Single-item upsert
+
+The single-item upsert compiles regardless of the number of fields in the case class or assigns in the `onConflictUpdate`.
+
+#### Less assigns
+
 In `Repo.scala`, comment out this line:
 
 ```scala
@@ -58,6 +64,8 @@ sbt  -java-home /Library/Java/JavaVirtualMachines/adoptopenjdk-16.jdk/Contents/H
 ```
 
 It will compile.
+
+#### More fields in the case class
 
 Uncomment this line in `Item.scala`:
 
@@ -75,6 +83,8 @@ Now, compilation will fail even with one assign specified for the `onConflictUpd
 //    _.a5 -> _.a5
   )
 ```
+
+#### JVM options
 
 Adding `--add-opens=java.base/java.util=ALL-UNNAMED` to the `.jvmopts` doesn't resolve the issue.
 
