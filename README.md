@@ -54,7 +54,7 @@ The single-item upsert compiles regardless of the number of fields in the case c
 In `Repo.scala`, comment out this line:
 
 ```scala
-_.a5 -> _.a5
+_.a4 -> _.a4
 ```
 
 Run:
@@ -77,10 +77,10 @@ Now, compilation will fail even with one assign specified for the `onConflictUpd
 
 ```scala
   .onConflictUpdate(_.id)(
-    _.a2 -> _.a2,
+    _.a1 -> _.a1,
+//    _.a2 -> _.a2,
 //    _.a3 -> _.a3,
 //    _.a4 -> _.a4,
-//    _.a5 -> _.a5
   )
 ```
 
