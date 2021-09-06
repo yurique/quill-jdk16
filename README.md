@@ -1,18 +1,18 @@
-### 1. run with java8:
+### 1. run with java 8:
 ```shell
 sbt -java-home /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home compile 
 ```
 
 It compiles.
 
-### 2. run with java11:
+### 2. run with java 11:
 ```shell
 sbt -java-home /Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home compile 
 ```
 
 It compiles.
 
-### 3. run with java11:
+### 3. run with java 16:
 ```shell
 sbt  -java-home /Library/Java/JavaVirtualMachines/adoptopenjdk-16.jdk/Contents/Home compile
 ```
